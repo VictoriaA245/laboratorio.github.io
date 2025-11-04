@@ -1,0 +1,97 @@
+/*CSS Avanzado*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg:#f2f5f8; 
+    --nav:#A64D79; 
+    --card:#ffffff;
+    --accent:#6fa8dc;
+    --maxw:1100px;
+}
+
+*{box-sizing:border-box;}
+body{
+    font-family:'Times New Roman', Times, serif;
+    background:var(--bg);
+    margin:0;
+    color:#000000;
+}
+
+/*header*/
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:var(--nav);
+    color:#fff;
+    z-index:1000;
+    padding:.8rem 0;
+    box-shadow:0 5px 10px rgb(0, 0, 0);
+}
+header .container{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 .75rem;}
+nav ul{list-style:none;display: flex;gap: 1rem;align-items: center;}
+nav a{color: #fff;text-decoration: none;padding: .35rem .6rem;border-radius: 6px;}
+nav a:hover{background: rgba(255, 252, 252, 0.77);}
+
+
+.page-content{padding-top:90px;max-width:var(--maxw);margin: 1rem auto; padding-left: 1rem; padding-right:1rem;}
+
+/*primera linea art.*/
+.article-sticky p:first-of-type{
+    position:sticky;
+    top:90px;
+    background: linear-gradient(0deg, #fffccf, transparent);
+    padding: .5rem;
+    z-index: 50;
+}
+
+
+/*articulo 2 columnas*/
+@media (min-withd:481px){
+    .two-col{column-count:2;column-gap:2rem}
+}
+
+/*imagen animada*/
+
+img.animated{
+    opacity:0;
+    transform:translateY(20px);
+    animation:slideIn.8s ease forwards;
+}
+@keyframes slideIn{
+    to{opacity:1;trnsform:none}
+}
+
+
+/*rotación de logo en 3d*/
+.logo-rotate{
+    transform-style:preserve-3d;
+    animation:logoSpin 1.2s ease;
+}
+@keyframes logoSpin{
+    from{transform:rotateY(0deg);}
+    to{transform:rotateY(360deg);}
+}
+
+/*bordes, cajas*/
+.card{background:var(--card);padding: 1rem;border-radius: 8px solid #e6eefe;box-shadow: 0 5px 15px rgba(0,0,0,);}
+
+/*flecha que regresa dentro del circulo*/
+back-to-top{
+    position: fixed;
+    right: 20px;
+    bottom:20px;
+    width: 50px; height: 50px; border-radius: 50%;
+    display: flex;align-items: center;justify-content: center;
+    background: var(--accent);color: #fff;cursor: pointer;box-shadow:  0 5px 15px rgba(0,0,0);
+    z-index: 1200;
+    text-decoration: none;
+}
+
+/*ajuste de imagenes*/
+figure img{max-width: 100%;height: auto;border-radius: 10px;}
+
+/*accesibilidad y focus*/
+a:focus,button:focus,input:focus{outline: 5px solid #1e90ff;outline-offset:3px;}

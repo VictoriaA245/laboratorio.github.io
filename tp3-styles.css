@@ -1,0 +1,13 @@
+body{font-family: 'Times New Roman', Times, serif;background:#f4f6f8;color:#000000;margin:0;padding:0;}
+header{background:#A64D79;color:#fff;padding:1rem;text-align: center;}
+nav ul{list-style:none;display:flex;justify-content:center;gap:1rem;padding:0;margin-top:.5rem;}
+nav a{color:#fff;text-decoration:none;}
+main{max-width:500px;margin:1.5rem auto;padding:1rem; background:#fff;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+table{width:100%;border-collapse:collapse;margin-top:1rem;}
+th,td{border:1px solid #fff;padding:.75rem;text-align:left;}
+th{background:#fff;}
+form label{display:block;margin-top:.75rem;font-weight:300;}
+input[type=text], input[type=email],input[type=tel],input[type=number],input[type=password]{width:100%;padding:.5rem;margin-top:.25rem;border:1px solid #fff;border-radius:4px}
+button{margin-top:1rem;padding:.4rem 1rem;background:#A64D79;color: #fff;border:none;border-radius:5px;cursor: pointer;}
+button:hover{opacity:.90;}
+footer{background:#A64D79;color: #fff;text-align: center;padding:.8rem;margin-top:1rem;}

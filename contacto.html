@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="es">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="tp3-styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Contacto</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="preguntas.html">Preguntas</a></li>
+                        <li><a href="juego.html">Juego</a></li>
+                        <li><a href="acercade.html">Acerca de</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <main>
+            <form id="contactForm" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">Nombre (máx.20) <span aria-hidden="true">*</span></label>
+                    <input id="nombre" name="nombre" type="text" maxlength="20" required>
+
+                    <label for="apellido">Apellido (máx.20) <span aria-hidden="true">*</span></label>
+                    <input id="apellido" name="apellido" type="text" maxlength="20" required>
+
+                    <label for="email>">Email <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" name="telefono" type="tel" placeholder="Ej:  297-xxxxxxx" onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 299-XXXXXXX'"">
+
+                    <label for="edad">Edad (16-120)</label>
+                    <input id="edad" name="edad" type="number" min="16" max="120" required>
+                
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" name="direccion" type="text">
+
+                    <label for="provincia">Provincia</label>
+                    <input id="provincia" name="provincia" list="provincias" placeholder="Escribí o elegí">
+
+                    <datalist id="provincias">
+                        <option value="Neuquén">
+                        <option value="Río Negro">
+                        <option value="Chubut">
+                        <option value="Santa Cruz">
+                        <option value="Tierra del Fuego">
+                    </datalist>
+
+                    <label for="cp">Código postal</label>
+                    <input id="cp" name="cp" type="text" pattern="^[A-Z]\d{4}[A-Z]{3}$" placeholder="A1234ABC">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias de contacto</legend>
+
+                    <p>Método preferido</p>
+                    <label><input type="radio" name="metodo" value="email" checked>Correo electrónico</label>
+                    <label><input type="radio" name="metodo" value="postal">Correo postal</label>
+                    <label><input type="radio" name="metodo" value="telefono">Teléfono</label>
+
+                    <p>Tipo de suscripción</p>
+                    <label><input type="checkbox" name="suscripción" value="noticias">Noticias</label>
+                    <label><input type="checkbox" name="suscripción" value="promociones">Promociones</label>
+                    <label><input type="checkbox" name="suscripción" value="alertas">Alertas</label>
+                    <label><input type="checkbox" name="suscripción" value="eventos">Eventos</label>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2025 Victoria Aguirre - Universidad Nacional del Comahue</p>
+        </footer>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e){
+                if(!this.checkValidity()){
+                    e.preventDefault();
+                    alert('Por favor completá correctamente el formulario. Revisa los campos requeridos y los formatos.');
+                } else {
+                    e.preventDefault();
+                    alert('Formulario enviado (simulado).');
+                    this.reset();
+                }
+            });
+        </script>
+    </body>
+</html>

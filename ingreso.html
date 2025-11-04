@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="es">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Ingreso</title>
+        <link rel="stylesheet" href="tp3-styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Ingreso</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="loginForm" action="#" method="post" novalidate>
+                <label for="user">Usuario</label>
+                <input id="user" name="user" type="text" required>
+
+                <label for="pass">Clave</label>
+                <input id="pass" name="pass" type="password" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <div id="loginMsg" aria-live="polite"></div>
+        </main>
+
+        <footer>
+            <p>© 2025 Victoria Aguirre</p>
+        </footer>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e){e.preventDefault();
+            const user = document.getElementById('user').value;
+            const pass = document.getElementById('pass').value;
+            if(user === 'alumno' && pass === '123456'){
+                document.getElementById('loginMsg').textContent = 'Ingreso correcto (simulado).';
+            } else {
+                document.getElementById('loginMsg').textContent = 'Credenciales incorrectas (simulado).';
+            }
+            });
+        </script>
+    </body>
+</html>

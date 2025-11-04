@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Registro de usuario</title>
+        <link rel="stylesheet" href="tp3-styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Registros</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ingreso.html">Ingreso</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="registroForm" action="#" method="post" novalidate>
+                <label for="usuario">Nombre de usuario</label>
+                <input id="usuario" name="usuario" type="text" required>
+
+                <label for="regEmail">Email</label>
+                <input id="regEmail" name="regEmail" type="email" required>
+
+                <label for="pass1">Clave</label>
+                <input id="pass1" name="pass1" type="password" minlength="6" required>
+
+                <label for="pass2">Repetir clave</label>
+                <input id="pass2" name="pass2" type="password" minlength="6" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="regMsg" aria-live="polite"></div>
+        </main>
+
+        <footer>
+            <p>© 2025 Victoria Aguirre</p>
+        </footer>
+        <script>
+        document.getElementById('registroForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const p1 = document.getElementById('pass1').value;
+            const p2 = document.getElementById('pass2').value;
+            if(p1 !== p2){
+            alert('Las claves no coinciden.');
+            return;
+            }
+            document.getElementById('regMsg').textContent = 'Registro completado (simulado).';
+            this.reset();
+        });
+        </script>
+    </body>
+</html>
