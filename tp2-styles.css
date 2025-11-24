@@ -36,7 +36,11 @@ article{
     border:1px solid #ddd;
     border-radius:6px;
 }
-
+.img_vic{
+    width: 150px;
+    border-radius: 50%;
+    text-aling: center;
+        }
 figure{ text-align:center; 
        margin:1rem 0;}
 figure img{max-width: 100%; 
@@ -46,11 +50,6 @@ figcaption{ font-size:15px;
            color:#000000;
            margin-top:.5rem;
           }
-.img_vic{
-    width: 150px;
-    border-radius: 50%;
-    text-aling: center;
-        }
 aside{
     background:#fffbe6;
     border-left:4px solid #6fa8dc;
@@ -67,3 +66,4 @@ footer{
     margin-top:2rem;
 
 }
+
